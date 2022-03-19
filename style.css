@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+body {
+  font-family: 'Poppins', sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: #2b2b2b;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  margin: 0 4em;
+}
+
+.card {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #4471f0;
+  font-weight: bold;
+  margin-top: 1em;
+  padding: .5em;
+  margin-left: -.5em;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+a:before, a:after {
+  position: absolute;
+  content: " ";
+  border: solid 2px #4471f0;
+  border-radius: 1em;
+  bottom: 0.3em;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:before {
+  width: 1em;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+a::after {
+  width: 82%;
+  left: 1em;
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+}
+
+a:hover:before {
+  -webkit-transform: scaleX(0.3);
+          transform: scaleX(0.3);
+}
+
+a:hover:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+/*# sourceMappingURL=style.css.map */
